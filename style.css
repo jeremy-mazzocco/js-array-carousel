@@ -38,12 +38,9 @@ img {
     max-width: 100%;
     width: 700px;
     height: 500px;
+    display: none;
 }
 
 .active {
     display: block;
-}
-
-.hidden {
-    display: none;
 }

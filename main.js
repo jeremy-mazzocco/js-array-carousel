@@ -1,15 +1,20 @@
 // variabili
-const selectItem = document.querySelector('.item');
+const selectSlider = document.querySelector('.slider');
 const selectButtonDown = document.getElementById('down');
-let imgArray = ['<img src="img/02.webp">', '<img src="img/02.webp">', '<img src="img/02.webp">', '<img src="img/02.webp">'];
+const selectImg = document.querySelector('.item');
+const imgArray = ['1', '2', '3', '4', '5'];
 
-// al click inserisci la tag imgagine
+for (let i = 0; i < imgArray.length; i++) {
+    // inserisco il blocco div e img sul DOM
+    selectSlider.innerHTML = `<div class="item"><img src="img/0${imgArray[i]}.webp"></div>`;
+    console.log(selectSlider);
+};
+
+// al click inserisci mostra l'immagine
 selectButtonDown.addEventListener('click',
     function () {
-        selectItem.innerHTML = imgArray[1];
-        imgArray
-        console.log(imgArray[1]);
-    })
+        selectImg.classList.add("active");
+    });
 
 
 
